@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #f5f3ef;
+    --bg-card: #edeae3;
+    --text-primary: #1e1b17;
+    --text-secondary: #65594a;
+    --accent: #d97706;
+    --border: #d4ccbe;
+    --grain-opacity: 0.035;
+  }
+
+  .dark {
+    --bg: #141210;
+    --bg-card: #1e1b17;
+    --text-primary: #f0ece4;
+    --text-secondary: #998b74;
+    --accent: #f59e0b;
+    --border: #3a352e;
+    --grain-opacity: 0.05;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg);
+    color: var(--text-primary);
+    font-family: 'DM Sans', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: #fff;
+  }
+}
+
+@layer components {
+  .section-heading {
+    @apply font-display text-4xl md:text-5xl font-bold tracking-tight;
+    color: var(--text-primary);
+  }
+
+  .card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    @apply rounded-2xl p-6 transition-all duration-300;
+  }
+
+  .card:hover {
+    border-color: color-mix(in srgb, var(--accent) 60%, transparent);
+    transform: translateY(-4px) scale(1.01);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.15), 0 0 0 1px color-mix(in srgb, var(--accent) 20%, transparent);
+  }
+
+  .badge {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    @apply text-xs font-mono px-3 py-1 rounded-full transition-all duration-200;
+  }
+
+  .accent-text {
+    color: var(--accent);
+  }
+
+  .btn-primary {
+    background: var(--text-primary);
+    color: var(--bg);
+    @apply px-6 py-3 rounded-full font-display font-semibold text-sm tracking-wide transition-all duration-200;
+  }
+
+  .btn-primary:hover {
+    opacity: 0.88;
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  }
+
+  .btn-primary:active {
+    transform: translateY(0) scale(0.97);
+  }
+
+  .btn-outline {
+    border: 1.5px solid var(--border);
+    color: var(--text-primary);
+    @apply px-6 py-3 rounded-full font-display font-semibold text-sm tracking-wide transition-all duration-200;
+  }
+
+  .btn-outline:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+  }
+
+  .btn-outline:active {
+    transform: translateY(0) scale(0.97);
+  }
+
+  .nav-link {
+    color: var(--text-secondary);
+    @apply font-body text-sm tracking-wide relative;
+    transition: color 0.2s ease;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1.5px;
+    background: var(--accent);
+    border-radius: 2px;
+    transition: width 0.25s ease;
+  }
+
+  .nav-link:hover {
+    color: var(--accent);
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+}
+
+/* Grain texture overlay */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: var(--grain-opacity);
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* Skill bar animation */
+.skill-fill {
+  animation: fillBar 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes fillBar {
+  from { width: 0%; }
+  to { width: var(--fill); }
+}
+
+/* Input focus glow */
+input:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 25%, transparent);
+  border-color: var(--accent) !important;
+}
+
+/* Social icon hover */
+a[aria-label]:hover {
+  background: color-mix(in srgb, var(--accent) 15%, transparent) !important;
+  color: var(--accent) !important;
+  border-color: color-mix(in srgb, var(--accent) 40%, transparent) !important;
+}
+
+/* Page section smooth entrance */
+section {
+  transition: opacity 0.3s ease;
+}
+
+/* Tap / active feedback for all interactive elements */
+button:active, a:active {
+  transform: scale(0.97);
+}
