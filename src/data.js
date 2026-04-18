@@ -177,7 +177,7 @@ export const experience = [
     org: 'AWS Club — Easwari Engineering College',
     period: '2024 – Present',
     bullets: [
-      'Conducted hands-on cloud workshops for 50+ students on core AWS services',
+      'Conducted hands-on cloud workshops for 20+ students on core AWS services',
       'Delivered technical presentations on cloud architecture and best practices',
       'Coordinated directly with AWS representatives for campus assessments and club activities',
     ],
