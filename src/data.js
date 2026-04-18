@@ -104,17 +104,6 @@ export const projects = [
     github: 'https://github.com/Srinivasan0107/goods',
   },
   {
-    title: 'Rawary',
-    subtitle: 'Raw Materials Marketplace',
-    description:
-      'A JavaScript-based marketplace platform for raw material trading. Provides a seamless interface for suppliers and buyers to connect, negotiate, and transact efficiently.',
-    tags: ['JavaScript', 'Marketplace', 'Trading', 'Full Stack'],
-    highlights: ['Supplier-buyer connect', 'Real-time listings', 'Trade platform'],
-    color: '#b45309',
-    icon: '🏭',
-    github: 'https://github.com/Srinivasan0107/Rawary',
-  },
-  {
     title: 'Room Finder',
     subtitle: 'Accommodation Finder',
     description:
