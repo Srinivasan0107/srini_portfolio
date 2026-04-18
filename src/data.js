@@ -148,8 +148,8 @@ export const projects = [
     github: 'https://github.com/Srinivasan0107/nextjs-project-bootstrap',
   },
   {
-    title: 'Yuvathon VIT',
-    subtitle: 'Entrepreneur Website',
+    title: 'Startups Website',
+    subtitle: 'Entrepreneur Platform',
     description:
       'An entrepreneur-focused event website built for Yuvathon at VIT. Showcases startup pitches, event schedules, speaker profiles, and registration for the entrepreneurship summit.',
     tags: ['TypeScript', 'Next.js', 'Event Platform', 'Entrepreneurship'],
