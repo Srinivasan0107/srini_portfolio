@@ -52,22 +52,44 @@
   }
 
   .card {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     @apply rounded-2xl p-6 transition-all duration-300;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.12), inset 0 1px 0 rgba(255,255,255,0.08);
+  }
+
+  .dark .card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.3), inset 0 1px 0 rgba(255,255,255,0.05);
+  }
+
+  :root:not(.dark) .card {
+    background: rgba(255, 255, 255, 0.55);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07), inset 0 1px 0 rgba(255,255,255,0.9);
   }
 
   .card:hover {
-    border-color: color-mix(in srgb, var(--accent) 60%, transparent);
+    border-color: color-mix(in srgb, var(--accent) 50%, transparent);
     transform: translateY(-4px) scale(1.01);
-    box-shadow: 0 16px 40px rgba(0,0,0,0.15), 0 0 0 1px color-mix(in srgb, var(--accent) 20%, transparent);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.18), 0 0 0 1px color-mix(in srgb, var(--accent) 20%, transparent), inset 0 1px 0 rgba(255,255,255,0.12);
   }
 
   .badge {
-    background: var(--bg-card);
-    border: 1px solid var(--border);
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     color: var(--text-secondary);
     @apply text-xs font-mono px-3 py-1 rounded-full transition-all duration-200;
+  }
+
+  :root:not(.dark) .badge {
+    background: rgba(255, 255, 255, 0.6);
+    border: 1px solid rgba(0,0,0,0.08);
   }
 
   .accent-text {
@@ -192,4 +214,32 @@ section {
 /* Tap / active feedback for all interactive elements */
 button:active, a:active {
   transform: scale(0.97);
+}
+
+/* Glass utility */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Ambient background blobs for depth */
+body::after {
+  content: '';
+  position: fixed;
+  top: -20%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 8%, transparent), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  animation: blobFloat 12s ease-in-out infinite;
+}
+
+@keyframes blobFloat {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-30px, 30px) scale(1.05); }
 }
