@@ -223,23 +223,3 @@ button:active, a:active {
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
-
-/* Ambient background blobs for depth */
-body::after {
-  content: '';
-  position: fixed;
-  top: -20%;
-  right: -10%;
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 8%, transparent), transparent 70%);
-  pointer-events: none;
-  z-index: 0;
-  animation: blobFloat 12s ease-in-out infinite;
-}
-
-@keyframes blobFloat {
-  0%, 100% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(-30px, 30px) scale(1.05); }
-}

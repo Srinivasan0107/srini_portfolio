@@ -9,6 +9,7 @@ import Achievements from './components/Achievements'
 import Certifications from './components/Certifications'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Background from './components/Background'
 
 export default function App() {
   const [dark, setDark] = useState(false)
@@ -29,17 +30,20 @@ export default function App() {
   }
 
   return (
-    <div className="min-h-screen">
-      <Navbar dark={dark} toggleDark={toggleDark} />
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Experience />
-      <Achievements />
-      <Certifications />
-      <Contact />
-      <Footer />
+    <div className="min-h-screen relative">
+      <Background />
+      <div className="relative" style={{ zIndex: 1 }}>
+        <Navbar dark={dark} toggleDark={toggleDark} />
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Experience />
+        <Achievements />
+        <Certifications />
+        <Contact />
+        <Footer />
+      </div>
     </div>
   )
 }
