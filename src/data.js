@@ -191,28 +191,6 @@ export const projects = [
     icon: '🧠',
     github: 'https://github.com/SaiSruthi-R/THREAD',
   },
-  {
-    title: 'Void',
-    subtitle: 'Python Utility Tool',
-    description:
-      'A Python-based utility and automation tool designed to handle background tasks, scripting workflows, and system-level operations with a minimal and efficient codebase.',
-    tags: ['Python', 'Automation', 'Utility', 'Scripting'],
-    highlights: ['Workflow automation', 'System scripting', 'Minimal codebase'],
-    color: '#374151',
-    icon: '⚡',
-    github: 'https://github.com/saidakshinsridhar/void',
-  },
-  {
-    title: 'TheWalkingDev',
-    subtitle: 'Developer Blog & Portfolio',
-    description:
-      'A developer-focused blog and portfolio platform showcasing tech articles, project walkthroughs, and coding insights. Built to share knowledge and document the developer journey.',
-    tags: ['Blog', 'Portfolio', 'Developer', 'Content'],
-    highlights: ['Tech articles', 'Project walkthroughs', 'Dev journey'],
-    color: '#1f2937',
-    icon: '🖊️',
-    github: 'https://github.com/rakheshkrishna2005/TheWalkingDev',
-  },
 ]
 
 export const experience = [
