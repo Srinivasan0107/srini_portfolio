@@ -75,24 +75,21 @@ export default function Intro({ onComplete }) {
         {/* Scroll reveal lines */}
         <div className="absolute text-center px-6 max-w-2xl">
           <motion.p
-            style={{ opacity: line1Opacity }}
+            style={{ opacity: line1Opacity, fontSize: 'clamp(1.4rem, 4vw, 2.8rem)', color: 'var(--text-primary)' }}
             className="font-display font-semibold mb-6"
-            style={{ fontSize: 'clamp(1.4rem, 4vw, 2.8rem)', color: 'var(--text-primary)', opacity: line1Opacity }}
           >
             Building things that matter.
           </motion.p>
           <motion.p
-            style={{ opacity: line2Opacity }}
+            style={{ opacity: line2Opacity, color: 'var(--text-secondary)' }}
             className="font-body text-lg mb-6"
-            style={{ color: 'var(--text-secondary)', opacity: line2Opacity }}
           >
             From government platforms to AI systems —<br />
             crafting scalable, impactful solutions.
           </motion.p>
           <motion.p
-            style={{ opacity: line3Opacity }}
+            style={{ opacity: line3Opacity, color: 'var(--accent)' }}
             className="font-mono text-sm tracking-widest uppercase"
-            style={{ color: 'var(--accent)', opacity: line3Opacity }}
           >
             2nd Place · IIT Madras · AWS Technical Lead
           </motion.p>
