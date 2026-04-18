@@ -269,14 +269,6 @@ export default function Background() {
         <FloatingShape key={i} {...s} />
       ))}
 
-      {/* Horizontal scan line */}
-      <motion.div
-        className="absolute left-0 right-0 pointer-events-none"
-        style={{ height: '1px', background: 'linear-gradient(90deg, transparent, var(--accent), transparent)', opacity: 0.15 }}
-        animate={{ top: ['0%', '100%', '0%'] }}
-        transition={{ duration: 18, repeat: Infinity, ease: 'linear' }}
-      />
-
       {/* Vignette edges */}
       <div className="absolute inset-0"
         style={{
