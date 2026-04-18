@@ -126,17 +126,6 @@ export const projects = [
     github: 'https://github.com/Srinivasan0107/nextjs-commerce',
   },
   {
-    title: 'CredTech',
-    subtitle: 'Credential Verification Platform',
-    description:
-      'A Python-based platform for managing and verifying academic and professional credentials. Automates credential validation workflows, reducing manual verification overhead.',
-    tags: ['Python', 'Credential Tech', 'Automation', 'Verification'],
-    highlights: ['Automated validation', 'Credential management', 'Python backend'],
-    color: '#dc2626',
-    icon: '🎓',
-    github: 'https://github.com/Srinivasan0107/CredTech',
-  },
-  {
     title: 'Next.js Bootstrap',
     subtitle: 'Project Starter Template',
     description:
