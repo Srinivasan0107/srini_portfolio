@@ -192,17 +192,6 @@ export const projects = [
     github: 'https://github.com/SaiSruthi-R/THREAD',
   },
   {
-    title: 'MindScribe',
-    subtitle: 'Smart Note-Taking App',
-    description:
-      'A Java-based intelligent note-taking and journaling application. Organizes thoughts, ideas, and notes with smart categorization, search, and a clean writing interface.',
-    tags: ['Java', 'Note-Taking', 'Productivity', 'Journaling'],
-    highlights: ['Smart categorization', 'Full-text search', 'Clean UI'],
-    color: '#0369a1',
-    icon: '📝',
-    github: 'https://github.com/saidakshinsridhar/MindScribe',
-  },
-  {
     title: 'Void',
     subtitle: 'Python Utility Tool',
     description:
