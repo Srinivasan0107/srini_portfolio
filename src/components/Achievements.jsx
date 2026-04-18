@@ -157,7 +157,6 @@ export default function Achievements() {
             <ul className="grid sm:grid-cols-2 gap-2.5">
               {[
                 'AWS Club Technical Lead — Easwari Engineering College',
-                'Trained 50+ students on cloud services & architecture',
                 'Built accessibility-focused app for persons with disabilities',
                 'Competed at national level in Cyber Security track',
               ].map((h, j) => (
